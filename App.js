@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/Home'
 import Add from './screens/Add';
 import SettingsScreen from './screens/Settings'
+import { Header } from 'react-native/Libraries/NewAppScreen';
+import { NativeBaseProvider } from 'native-base';
 
 
 
@@ -42,7 +44,7 @@ function MyTabBar({ state, descriptors, navigation }) {
 
         return (
           <TouchableOpacity
-          className=" w-screen h-20 flex justify-center items-center"
+          className=" w-screen h-20 flex justify-center items-center bg-[#2c2e30]"
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -51,7 +53,7 @@ function MyTabBar({ state, descriptors, navigation }) {
             onLongPress={onLongPress}
             style={{ flex: 1 }}
           >
-            <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
+            <Text style={{ color: isFocused ? '#FFFFFF' : '#929292' }}>
               {label}
             </Text>
           </TouchableOpacity>
@@ -65,13 +67,14 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
+    <NativeBaseProvider>
     <NavigationContainer>
       <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Tab.Screen name="Add" component={Add} />
-
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
+  </NativeBaseProvider>
   );
 }
