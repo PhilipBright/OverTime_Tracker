@@ -4,9 +4,21 @@ import { View, Text, TouchableOpacity } from 'react-native';
 export default function Balance() {
     const [balance, setBalance] = useState(1000);
   return (
-    <View className=" bg-[#FF6600] w-80 h-40 rounded-lg mb-10 flex justify-center items-center" >
-        <Text className=" text-[20px] text-white font-medium">Total Balance</Text>
-        <Text className=" text-[60px] text-white ">${balance}</Text>
-      </View>
+    <View
+            style={{
+              backgroundColor: '#FF6600',
+              width: '80%',
+              height: "20%",
+              borderRadius: 8,
+              marginBottom: 8,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold' }}>
+              Total Balance
+            </Text>
+            <Text style={{ fontSize: 60, color: 'white' }}>${balance}</Text>
+          </View>
   )
 }
