@@ -20,7 +20,7 @@ export default function HomeScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor:'#1E1E1E' }}>
       <ScrollView >
         <View className=" flex justify-center items-center">
-      <TouchableOpacity className=" w-screen h-20 flex-row justify-start items-center mb-4 ml-8 mt-2">
+      <TouchableOpacity className=" w-screen h-20 flex-row justify-start items-center mb-4 ml-8 mt-4">
         <View>
           <Image source={profile} className=" w-14 h-14 rounded-[50px]" />
         
