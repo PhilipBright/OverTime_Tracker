@@ -1,9 +1,5 @@
-
 import React, { useState } from 'react';
-
-import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
-
-
+import { View, StyleSheet } from 'react-native';
 import CalendarPicker from 'react-native-calendar-picker';
 
 const Calendar = () => {
@@ -11,7 +7,6 @@ const Calendar = () => {
   const [selectedEndDate, setSelectedEndDate] = useState(null);
 
   const onDateChange = (date, type) => {
-    //function to handle the date change
     if (type === 'END_DATE') {
       setSelectedEndDate(date);
     } else {
@@ -21,65 +16,50 @@ const Calendar = () => {
   };
 
   return (
-  
-      <View style={styles.container}>
-        
-        <CalendarPicker
-          startFromMonday={true}
-          allowRangeSelection={true}
-          minDate={new Date(2018, 1, 1)}
-          maxDate={new Date(2050, 6, 3)}
-          weekdays={['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']}
-          months={[
-            'January',
-            'Febraury',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December',
-          ]}
-          previousTitle="Previous"
-          nextTitle="Next"
-          todayBackgroundColor="#e6ffe6"
-          selectedDayColor="#66ff33"
-          selectedDayTextColor="#000000"
-          scaleFactor={375}
-          textStyle={{
-            
-            color: '#000000',
-          }}
-          onDateChange={onDateChange}
-        />
-        {/* <View style={styles.textStyle}>
-          <Text style={styles.textStyle}>Selected Start Date :</Text>
-          <Text style={styles.textStyle}>
-            {selectedStartDate ? selectedStartDate.toString() : ''}
-          </Text>
-          <Text style={styles.textStyle}>Selected End Date : </Text>
-          <Text style={styles.textStyle}>
-            {selectedEndDate ? selectedEndDate.toString() : ''}
-          </Text>
-        </View> */}
-      </View>
-   
+    <View style={styles.container}>
+      <CalendarPicker
+        startFromMonday={true}
+        allowRangeSelection={true}
+        minDate={new Date(2018, 1, 1)}
+        maxDate={new Date(2050, 6, 3)}
+        weekdays={['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']}
+        months={[
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December',
+        ]}
+        previousTitle="Previous"
+        nextTitle="Next"
+        todayBackgroundColor="#25D366"
+        selectedDayColor="#66ff33"
+        selectedDayTextColor="#ffffff"
+        scaleFactor={375}
+        textStyle={{
+          color: '#ffffff',
+        }}
+        onDateChange={onDateChange}
+      />
+    </View>
   );
 };
-export default Calendar;
 
 const styles = StyleSheet.create({
   container: {
-    width: "100",
-   
-    backgroundColor: '#ffffff',
+    width: '100%', // Adjust the width as needed
+    alignSelf: 'center',
+    backgroundColor: '#5378FF',
     padding: 16,
-   
+    borderRadius: 12, // Add rounded corners
   },
-  
-  
 });
+
+export default Calendar;

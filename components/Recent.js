@@ -2,18 +2,26 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import recent from '../assets/recent.png';
 import { Box } from 'native-base';
-
+import Job1 from '../assets/job1.png'
 export default function RecentActivities() {
   return (
     <View>
+      <View style={{ display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
       <Box flexDirection="row" alignItems="center" mb={4} mt={2}>
-        <Text style={{ color: 'white', fontSize: 20, marginRight: 4 }}>
+        <Text style={{ color: 'black', fontSize: 18, marginRight: 4, fontWeight: 'bold' }}>
           Recent
         </Text>
+        
         <Image source={recent} style={{ width: 24, height: 24, marginBottom: 2, marginLeft: 2 }} />
       </Box>
+      <Box mt={6} style={{}}>
+      <Text>
+          View all
+        </Text>
+      </Box>
+      </View>
       <Box
-        bg="#2c2e30"
+        bg="#FFEFD0"
         width={360}
         height={20}
         roundedRight="md"
@@ -25,20 +33,26 @@ export default function RecentActivities() {
         alignItems="center"
         px={4}
       >
-        <Box>
-          <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>
+      
+        
+      <View style={{display:'flex', flexDirection:'row', }}>
+         <Image source={Job1} style={{width:50, height:50}} />
+        
+        <Box ml={4}>
+          <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold' }}>
             Skechers
           </Text>
-          <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>
-            408696
+          <Text style={{ color: 'gray', fontSize: 14 }}>
+           <Text>Postal Code:</Text> 408696
           </Text>
         </Box>
-        <Box justifyContent="flex-end">
-          <Text style={{ color: 'white', fontSize: 14 }}>02:45:00 mins</Text>
+        </View>
+        <Box justifyContent="flex-end" mt={-12}>
+          <Text style={{ color: 'black', fontSize: 14 }}>08:30 PM</Text>
         </Box>
       </Box>
       <Box
-        bg="#2c2e30"
+        bg="#FFEFD0"
         width={360}
         height={20}
         roundedRight="md"
@@ -50,20 +64,26 @@ export default function RecentActivities() {
         alignItems="center"
         px={4}
       >
-        <Box>
-          <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>
+      
+        
+      <View style={{display:'flex', flexDirection:'row', }}>
+         <Image source={Job1} style={{width:50, height:50}} />
+        
+        <Box ml={4}>
+          <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold' }}>
             Skechers
           </Text>
-          <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>
-            408696
+          <Text style={{ color: 'gray', fontSize: 14 }}>
+           <Text>Postal Code:</Text> 408696
           </Text>
         </Box>
-        <Box justifyContent="flex-end">
-          <Text style={{ color: 'white', fontSize: 14 }}>02:45:00 mins</Text>
+        </View>
+        <Box justifyContent="flex-end" mt={-12}>
+          <Text style={{ color: 'black', fontSize: 14 }}>08:30 PM</Text>
         </Box>
       </Box>
       <Box
-        bg="#2c2e30"
+        bg="#FFEFD0"
         width={360}
         height={20}
         roundedRight="md"
@@ -75,16 +95,22 @@ export default function RecentActivities() {
         alignItems="center"
         px={4}
       >
-        <Box>
-          <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold' }}>
+      
+        
+      <View style={{display:'flex', flexDirection:'row', }}>
+         <Image source={Job1} style={{width:50, height:50}} />
+        
+        <Box ml={4}>
+          <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold' }}>
             Skechers
           </Text>
-          <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>
-            408696
+          <Text style={{ color: 'gray', fontSize: 14 }}>
+           <Text>Postal Code:</Text> 408696
           </Text>
         </Box>
-        <Box justifyContent="flex-end">
-          <Text style={{ color: 'white', fontSize: 14 }}>02:45:00 mins</Text>
+        </View>
+        <Box justifyContent="flex-end" mt={-12}>
+          <Text style={{ color: 'black', fontSize: 14 }}>08:30 PM</Text>
         </Box>
       </Box>
     </View>
