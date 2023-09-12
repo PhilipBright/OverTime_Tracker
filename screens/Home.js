@@ -17,17 +17,17 @@ export default function HomeScreen() {
   
   
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor:'#1E1E1E' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor:'#ffffff' }}>
       <ScrollView >
         <View className=" flex justify-center items-center">
       <TouchableOpacity className=" w-screen h-20 flex-row justify-start items-center mb-4 ml-8 mt-4">
         <View>
-          <Image source={profile} className=" w-14 h-14 rounded-[50px]" />
+          <Image source={profile} className=" w-12 h-12 rounded-[50px]" />
         
         </View>
-        <View className=" ml-2">
-          <Text className=" text-white font-bold text-xl">Naw Emerald Soe Moe Ko</Text>
-          <Text className=" text-white">Professional Cleaning Service Provider</Text>
+        <View className=" ml-4">
+          <Text className=" text-black font-bold text-xl">Naw Emerald Soe Moe Ko</Text>
+          <Text className=" text-black">Professional Cleaning Service Provider</Text>
         </View>
        
       

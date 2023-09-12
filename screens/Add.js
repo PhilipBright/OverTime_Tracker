@@ -5,7 +5,8 @@ import OTForm from '../components/OTForm';
 
 export default function Add() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor:'#1E1E1E' }}>
+      <View style={{ flex: 1, justifyContent: 'center', backgroundColor:'#ffffff' }}>
+       
        <Calendar/>
       <OTForm/>
       </View>

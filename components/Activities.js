@@ -6,7 +6,7 @@ export default function Activities() {
   const [hour, setHour] = useState(23);
 
   return (
-    <View>
+    <View >
       <View
         style={{
           width: '100%',
@@ -19,86 +19,76 @@ export default function Activities() {
           alignItems: 'center',
         }}
       >
-        <Text style={{ color: 'white', fontSize: 20, marginRight: 4 }}>
+        <Text style={{ color: 'black', fontSize: 18, marginRight: 4, fontWeight: 'bold' }}>
           Activities
         </Text>
         <Image source={activities} style={{ width: 24, height: 24 }} />
       </View>
+      <View style={{width: 360, display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
       <View
         style={{
-          backgroundColor: '#FF6600',
-          width: 360,
-          height: 90,
+          backgroundColor: '#25D366',
+          width: 150,
+          height:130,
           borderRadius: 12,
           marginBottom: 8,
+          display:'flex',
           flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          justifyContent: 'center',
+          paddingTop: 18,
           paddingHorizontal: 16,
+          marginRight: 32
         }}
       >
         {/* Total Hours */}
-        <View>
+        <View style={{width: 100,  display:'flex', alignItems:'center'}}>
           <Text style={{ color: 'white', fontSize: 18 }}>Total Hours</Text>
           <Text
             style={{
-              color: '#ffffa1',
-              fontSize: 28,
+              color: '#ffffff',
+              fontSize: 35,
               fontWeight: 'bold',
+              marginTop:16,
             }}
           >
             {hour}h
           </Text>
         </View>
         {/* Daily Streak */}
-        <View>
-          <Text style={{ color: 'white', fontSize: 18 }}>Daily Streak</Text>
-          <Text
-            style={{
-              color: '#ffffa1',
-              fontSize: 28,
-              fontWeight: 'bold',
-            }}
-          >
-            {hour}h
-          </Text>
-          <View
-            style={{
-              position: 'absolute',
-              left: '50%', // Position in the center
-              width: 2,
-              height: 64,
-              backgroundColor: '#ff983f',
-              top: '35%',
-              marginRight: 4,
-              transform: [{ translateX: -60 }, { translateY: -32 }],
-            }}
-          />
-        </View>
+        
+      </View>
+      <View
+        style={{
+          backgroundColor: '#25D366',
+          width: 150,
+          height: 130,
+          borderRadius: 12,
+          marginBottom: 8,
+          flexDirection: 'row',
+          justifyContent: 'center',
+       
+          paddingTop: 18,
+          paddingHorizontal: 16,
+      
+        }}
+      >
         {/* Total Hours */}
-        <View style={{ marginLeft: 8 }}>
+        <View style={{width: 100,  display:'flex', alignItems:'center'}}>
           <Text style={{ color: 'white', fontSize: 18 }}>Total Hours</Text>
           <Text
             style={{
-              color: '#ffffa1',
-              fontSize: 28,
+           
+              color: '#ffffff',
+              fontSize: 35,
               fontWeight: 'bold',
+             marginTop:16,
+             
             }}
           >
             {hour}h
           </Text>
-          <View
-            style={{
-              position: 'absolute',
-              left: '50%', // Position in the center
-              width: 2,
-              height: 64,
-              backgroundColor: '#ff983f',
-              top: '35%',
-              marginRight: 4,
-              transform: [{ translateX: -60 }, { translateY: -32 }],
-            }}
-          />
+        </View>
+        {/* Daily Streak */}
         </View>
       </View>
     </View>
