@@ -32,7 +32,7 @@ const OTForm = () => {
 
       <View style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
       <Button onPress={value} small style={{width: 200, backgroundColor:'#5378FF', marginTop:10}}>
-  <Text>Default Small</Text>
+  <Text>Confirm</Text>
 </Button>
       </View>
     </Stack>
