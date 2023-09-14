@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Text, Input } from "native-base";
+import { Stack, Text, Input, Button, View } from "native-base";
 import StartedTime from "../constants/StartedTime";
 import Duration from "../constants/Duration";
 const OTForm = () => {
@@ -11,6 +11,11 @@ const OTForm = () => {
     // Handle the selected time
     console.log("Selected time:", hour, minute);
   };
+  const value = () => {
+    console.log('clicked')
+  }
+
+
   return (
     <Stack space={2} w="90%" maxW="350px" mx="auto" style={{backgroundColor: '#FFF0D2', padding:20, marginTop: 10, borderRadius: 10 }}>
       <Text bold fontSize="xl" style={{ color: "black" }}>
@@ -25,6 +30,11 @@ const OTForm = () => {
       <Text>Duration</Text>
       <Duration onConfirm={handleDuration} />
 
+      <View style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
+      <Button onPress={value} small style={{width: 200, backgroundColor:'#5378FF', marginTop:10}}>
+  <Text>Default Small</Text>
+</Button>
+      </View>
     </Stack>
   );
 };
