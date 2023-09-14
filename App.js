@@ -6,7 +6,7 @@ import HomeScreen from './screens/Home'
 import Add from './screens/Add';
 import SettingsScreen from './screens/Settings'
 import { Header } from 'react-native/Libraries/NewAppScreen';
-import { NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider, StatusBar } from 'native-base';
 
 
 
@@ -68,13 +68,15 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NativeBaseProvider>
-    <NavigationContainer>
-      <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
-        <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-        <Tab.Screen name="Add" component={Add} options={{ headerShown: false }} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  </NativeBaseProvider>
+      <NavigationContainer>
+        <StatusBar backgroundColor="black" /> 
+        <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
+          <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+          <Tab.Screen name="Add" component={Add} options={{ headerShown: false }} />
+          <Tab.Screen name="Settings" component={SettingsScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 }
+
