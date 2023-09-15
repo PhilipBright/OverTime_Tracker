@@ -31,8 +31,8 @@ const OTForm = () => {
       <Duration onConfirm={handleDuration} />
 
       <View style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
-      <Button onPress={value} small style={{width: 200, backgroundColor:'#5378FF', marginTop:10}}>
-  <Text>Confirm</Text>
+      <Button onPress={value} small style={{width: 200, height: 50, backgroundColor:'#5378FF', marginTop:10, borderRadius: 10}}>
+  <Text style={{fontSize: 20, color: 'white'}}>Confirm</Text>
 </Button>
       </View>
     </Stack>

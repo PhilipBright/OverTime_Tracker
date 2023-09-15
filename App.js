@@ -73,7 +73,7 @@ export default function App() {
         <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
           <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
           <Tab.Screen name="Add" component={Add} options={{ headerShown: false }} />
-          <Tab.Screen name="Settings" component={SettingsScreen} />
+          <Tab.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }}  />
         </Tab.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
